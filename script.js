@@ -238,3 +238,14 @@
 
   targets.forEach(el => observer.observe(el));
 })();
+// ── Background Music ──
+const music = document.getElementById('bg-music');
+
+function startMusic() {
+  music.volume = 0.4;
+  music.play().catch(() => {});
+  document.removeEventListener('click', startMusic);
+  document.removeEventListener('touchstart', startMusic);
+}
+document.addEventListener('click', startMusic);
+document.addEventListener('touchstart', startMusic);
