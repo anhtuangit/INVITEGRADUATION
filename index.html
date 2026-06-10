@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graduation Invitation – Ngọc Hồng</title>
+
+  <!-- ═══════════════════════════════════════════
+       SEO & Open Graph
+  ═══════════════════════════════════════════ -->
+  <meta name="description" content="Mời bạn tham dự lễ tốt nghiệp của Ngọc Hồng vào ngày 12 tháng 04." />
+  <meta property="og:title" content="Graduation Invitation – Ngọc Hồng" />
+  <meta property="og:description" content="Mời bạn tham dự lễ tốt nghiệp của Ngọc Hồng vào ngày 12 tháng 04." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Graduation Invitation – Ngọc Hồng" />
+  <meta name="twitter:description" content="Mời bạn tham dự lễ tốt nghiệp của Ngọc Hồng vào ngày 12 tháng 04." />
+  <meta name="twitter:image" content="hero.jpg" />
+
+  <!-- ═══════════════════════════════════════════
+       Google Fonts
+  ═══════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       CANVAS – Sakura & Hearts (shared)
+  ══════════════════════════════════════════ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 1 · HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero" class="section-hero">
+    <div class="hero-content reveal-fade">
+      <h1 class="hero-title">GRADUATION</h1>
+      <p class="hero-script">Ngọc Hồng</p>
+      <p class="hero-subtitle">Graduation Invitation</p>
+      <div class="hero-divider">
+        <span></span><span class="heart-ico">♥</span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 2 · INVITATION INFO
+  ══════════════════════════════════════════ -->
+  <section id="invite" class="section-invite">
+    <div class="invite-inner">
+
+      <!-- Polaroid -->
+      <div class="polaroid reveal-up" style="--delay:.1s">
+        <div class="polaroid-frame">
+          <img src="hero.jpg" alt="Ngọc Hồng graduation photo" />
+        </div>
+        <p class="polaroid-caption">Ngọc Hồng</p>
+      </div>
+
+      <!-- Info card -->
+      <div class="invite-info reveal-up" style="--delay:.25s">
+        <p class="info-eyebrow">You are cordially invited</p>
+        <h2 class="info-heading">Lễ Tốt Nghiệp</h2>
+
+        <div class="info-deco-line"><span></span></div>
+
+        <div class="date-block">
+          <span class="date-month">JUNE</span>
+          <span class="date-day">20</span>
+          <span class="date-dow">SUNDAY</span>
+        </div>
+
+        <div class="info-deco-line"><span></span></div>
+
+        <ul class="info-details">
+          <li>
+            <span class="detail-icon">🕘</span>
+            <span class="detail-text"><strong>09:00 AM</strong></span>
+          </li>
+          <li>
+            <span class="detail-icon">📍</span>
+            <span class="detail-text"><strong>Trường Đại Học Sư Phạm</strong><br/>Hòa Khánh, Đà Nẵng</span>
+          </li>
+        </ul>
+
+        <div class="info-deco-line"><span></span></div>
+
+        <!-- Cute stickers row -->
+        <div class="sticker-row">
+          <span class="sticker">🌸</span>
+          <span class="sticker">🎓</span>
+          <span class="sticker">💕</span>
+          <span class="sticker">✨</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3 · FILM STRIP GALLERY
+  ══════════════════════════════════════════ -->
+  <section id="gallery" class="section-gallery reveal-up">
+    <h2 class="section-label">— Kỷ Niệm —</h2>
+
+    <div class="film-strip-wrapper">
+      <div class="film-strip" id="film-strip">
+        <!-- Holes top row rendered by JS for brevity; duplicated inside strip -->
+        <div class="film-holes film-holes--top" aria-hidden="true" id="holes-top"></div>
+        <div class="film-images" id="film-images">
+          <!-- JS will duplicate for infinite scroll -->
+          <div class="film-frame"><img src="gallery1.jpg" alt="Gallery 1" /></div>
+          <div class="film-frame"><img src="gallery2.jpg" alt="Gallery 2" /></div>
+          <div class="film-frame"><img src="gallery3.jpg" alt="Gallery 3" /></div>
+          <div class="film-frame"><img src="gallery4.jpg" alt="Gallery 4" /></div>
+          <div class="film-frame"><img src="gallery5.jpg" alt="Gallery 5" /></div>
+          <div class="film-frame"><img src="gallery6.jpg" alt="Gallery 6" /></div>
+        </div>
+        <div class="film-holes film-holes--bottom" aria-hidden="true" id="holes-bottom"></div>
+      </div>
+    </div>
+
+    <!-- Location card -->
+    <div class="location-card reveal-up" style="--delay:.2s">
+      <div class="tape tape-purple">ĐỊA ĐIỂM</div>
+      <p class="loc-name">Trường Đại Học Sư Phạm</p>
+      <p class="loc-addr">Hòa Khánh, Đà Nẵng</p>
+      <div class="loc-doodle">🌷🌷🌷</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 4 · COUNTDOWN
+  ══════════════════════════════════════════ -->
+  <section id="countdown" class="section-countdown reveal-up">
+    <p class="countdown-eyebrow">🌸🌸🌸🌸🌸🌸</p>
+    <h2 class="countdown-title">Đếm ngày tốt nghiệp</h2>
+
+    <div class="countdown-grid">
+      <div class="cd-card float-card" style="--fi:0">
+        <span class="cd-value" id="cd-days">00</span>
+        <span class="cd-label">Ngày</span>
+      </div>
+      <div class="cd-card float-card" style="--fi:1">
+        <span class="cd-value" id="cd-hours">00</span>
+        <span class="cd-label">Giờ</span>
+      </div>
+      <div class="cd-card float-card" style="--fi:2">
+        <span class="cd-value" id="cd-minutes">00</span>
+        <span class="cd-label">Phút<tbody></tbody></span>
+      </div>
+      <div class="cd-card float-card" style="--fi:3">
+        <span class="cd-value" id="cd-seconds">00</span>
+        <span class="cd-label">Giây</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 5 · GOOGLE MAP
+  ══════════════════════════════════════════ -->
+  <section id="map" class="section-map reveal-up">
+    <h2 class="section-label">—🌸 Tìm qua Map 🌸 —</h2>
+    <div class="map-container">
+      <iframe
+        title="DH Sư Phạm trên Google Maps"
+        src="https://maps.google.com/maps?q=University%20of%20Science%20and%20Education%20The%20University%20of%20Danang&t=&z=17&ie=UTF8&iwloc=&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 6 · THANK YOU
+  ══════════════════════════════════════════ -->
+  <section id="thanks" class="section-thanks">
+    <div class="thanks-inner reveal-up">
+      <p class="thanks-script">Thank you</p>
+      <p class="thanks-body">
+        Cảm ơn bạn đã dành thời gian tham dự buổi lễ tốt nghiệp của mình.
+      </p>
+      <p class="thanks-body thanks-body--secondary">
+        Cảm ơn vì đã là một phần thanh xuân của mình. Mình rất vui nếu được cùng bạn lưu lại thêm một kỷ niệm đẹp trong ngày tốt nghiệp này. Hẹn gặp bạn nhé! 🎓✨
+      </p>
+      <div class="thanks-divider">
+        <span></span><span class="heart-ico">♥</span><span></span>
+      </div>
+      <p class="thanks-signature">Ngọc Hồng</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
