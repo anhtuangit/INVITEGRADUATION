@@ -166,6 +166,7 @@ section { position: relative; z-index: 1; }
   flex: 0 0 auto;
   width: min(280px, 80vw);
   transform: rotate(-9deg);
+  margin-top: 2rem;        /* ← thêm dòng này */
   background: var(--white);
   padding: 12px 12px 48px;
   border-radius: 4px;
@@ -466,24 +467,23 @@ section { position: relative; z-index: 1; }
 .section-map {
   padding: 5rem 1.5rem;
   background: var(--cream);
+  overflow: hidden;
 }
 
 .map-container {
-  max-width: 860px;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-card);
   aspect-ratio: 16/9;
   min-height: 280px;
-  border: 4px;
-  border-color: black;
 }
 
 .map-container iframe {
   width: 100%;
   height: 100%;
-  border: 4px;
+  border: none;
   display: block;
 }
 
@@ -574,9 +574,13 @@ section { position: relative; z-index: 1; }
   .film-frame { width: 160px; height: 120px; }
 }
 
-@media (min-width: 768px) {
-  .invite-inner { flex-wrap: nowrap; align-items: flex-start; }
-  .invite-info { max-width: 480px; }
+@media (min-width: 320px) {
+  .invite-inner { 
+    flex-wrap: nowrap; 
+    align-items: flex-start; 
+  }
+  .polaroid { width: min(200px, 35vw); }        
+  .invite-info { max-width: 100%; }   
 }
 
 @media (min-width: 1024px) {
