@@ -181,7 +181,7 @@
 
 /* ─── 3. COUNTDOWN TIMER ───────────────────────────────── */
 (function initCountdown() {
-  const TARGET = new Date('2026-06-20T09:00:00').getTime();
+  const TARGET = new Date('2026-06-20T09:30:00').getTime();
 
   const els = {
     days:    document.getElementById('cd-days'),
